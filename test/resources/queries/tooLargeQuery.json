@@ -1,0 +1,20 @@
+{
+  "title": "Too Large Query Error",
+  "input": {
+    "WHERE": {
+      "GT": {
+        "courses_avg": 50
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "courses_instructor",
+        "courses_avg"
+      ],
+      "ORDER": "courses_avg"
+    }
+  },
+  "errorExpected": true,
+  "expected": "ResultTooLargeError"
+}

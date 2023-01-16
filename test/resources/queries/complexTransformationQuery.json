@@ -1,0 +1,170 @@
+{
+	"title": "Transformation, avg WHERE avg > 98",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"courses_avg": 98
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_instructor",
+				"courses_title",
+				"overallAvg",
+				"countAvg",
+				"maxAvg"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"courses_instructor",
+				"courses_title"
+			],
+			"APPLY": [
+				{
+					"overallAvg": {
+						"AVG": "courses_avg"
+					}
+				},
+				{
+					"countAvg": {
+						"COUNT": "courses_avg"
+					}
+				},
+				{
+					"maxAvg": {
+						"MAX": "courses_avg"
+					}
+				}
+			]
+		}
+	},
+	"expected": [
+		{
+			"courses_instructor": "cox, daniel",
+			"courses_title": "career planning",
+			"overallAvg": 99.19,
+			"countAvg": 1,
+			"maxAvg": 99.19
+		},
+		{
+			"courses_instructor": "coria, lino",
+			"courses_title": "multimedia sys",
+			"overallAvg": 98.75,
+			"countAvg": 1,
+			"maxAvg": 98.75
+		},
+		{
+			"courses_instructor": "",
+			"courses_title": "multimedia sys",
+			"overallAvg": 98.75,
+			"countAvg": 1,
+			"maxAvg": 98.75
+		},
+		{
+			"courses_instructor": "cole, kenneth",
+			"courses_title": "assess lrn diffi",
+			"overallAvg": 98.39,
+			"countAvg": 2,
+			"maxAvg": 98.7
+		},
+		{
+			"courses_instructor": "",
+			"courses_title": "assess lrn diffi",
+			"overallAvg": 98.36,
+			"countAvg": 1,
+			"maxAvg": 98.36
+		},
+		{
+			"courses_instructor": "grow, laura",
+			"courses_title": "educ stds autism",
+			"overallAvg": 98.71,
+			"countAvg": 3,
+			"maxAvg": 98.8
+		},
+		{
+			"courses_instructor": "",
+			"courses_title": "educ stds autism",
+			"overallAvg": 98.67,
+			"countAvg": 2,
+			"maxAvg": 98.76
+		},
+		{
+			"courses_instructor": "cannon, joanna",
+			"courses_title": "dev el sk df&hrd",
+			"overallAvg": 98.45,
+			"countAvg": 1,
+			"maxAvg": 98.45
+		},
+		{
+			"courses_instructor": "",
+			"courses_title": "dev el sk df&hrd",
+			"overallAvg": 98.45,
+			"countAvg": 1,
+			"maxAvg": 98.45
+		},
+		{
+			"courses_instructor": "gomez, jose",
+			"courses_title": "algb topology i",
+			"overallAvg": 99.78,
+			"countAvg": 1,
+			"maxAvg": 99.78
+		},
+		{
+			"courses_instructor": "",
+			"courses_title": "algb topology i",
+			"overallAvg": 99.78,
+			"countAvg": 1,
+			"maxAvg": 99.78
+		},
+		{
+			"courses_instructor": "brew, nancy",
+			"courses_title": "cl pro prim care",
+			"overallAvg": 98.71,
+			"countAvg": 1,
+			"maxAvg": 98.71
+		},
+		{
+			"courses_instructor": "",
+			"courses_title": "cl pro prim care",
+			"overallAvg": 98.46,
+			"countAvg": 2,
+			"maxAvg": 98.71
+		},
+		{
+			"courses_instructor": "krist, jennifer",
+			"courses_title": "cl pro prim care",
+			"overallAvg": 98.21,
+			"countAvg": 1,
+			"maxAvg": 98.21
+		},
+		{
+			"courses_instructor": "burrows, marlene;harding, jillian;krist, jennifer;mccuaig, fairleth",
+			"courses_title": "fam nrs pract",
+			"overallAvg": 98.5,
+			"countAvg": 1,
+			"maxAvg": 98.5
+		},
+		{
+			"courses_instructor": "",
+			"courses_title": "fam nrs pract",
+			"overallAvg": 98.55,
+			"countAvg": 2,
+			"maxAvg": 98.58
+		},
+		{
+			"courses_instructor": "frank, erica",
+			"courses_title": "work int health",
+			"overallAvg": 98.98,
+			"countAvg": 1,
+			"maxAvg": 98.98
+		},
+		{
+			"courses_instructor": "",
+			"courses_title": "work int health",
+			"overallAvg": 98.98,
+			"countAvg": 1,
+			"maxAvg": 98.98
+		}
+	]
+}

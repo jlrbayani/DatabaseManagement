@@ -1,0 +1,8 @@
+{
+  "title": "Performing invalid query",
+  "input": {
+    "hi": 1
+  },
+  "errorExpected": true,
+  "expected": "InsightError"
+}

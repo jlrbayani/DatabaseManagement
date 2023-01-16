@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+		<title>310 Frontend</title>
+		<link href="/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<h1> Modify Database </h1>
+		<div>
+			<a href="index.html" class="button"> Home </a>
+			<div class="space"></div>
+			<a href="databaseList.html" class="button"> Database List </a>
+			<div class="space"></div>
+			<a href="modifyDatabase.html" class="button"> Modify Database </a>
+			<div class="space"></div>
+			<a href="queryDatabase.html" class="button"> Query </a>
+		</div>
+		<div class="verticalSpace"></div>
+		<div>
+			<label for="dataset"> Choose a valid dataset to add: </label>
+			<input type="file" id="dataset">
+			<label for="id"> Enter the ID of the dataset: </label>
+			<input type="text" id="id">
+			<!-- <label for="kind"> Enter the kind of the dataset: </label>
+			<input type="text" id="kind"> -->
+		</div>
+		<div class="verticalSpace"></div>
+		<div>
+			<button id="addDataset" class="button" > Add Dataset</button>
+			<button id="removeDataset" class="button" > Remove Dataset</button>
+		</div>
+		<div>
+			<h2> Result: </h2>
+			<p> ... </p>
+		</div>
+		<script type="text/javascript" src="/frontend.js"></script>
+	</body>
+</html>

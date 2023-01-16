@@ -1,0 +1,145 @@
+{
+	"title": "Have a wildcard on last index of word",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"GT": {
+						"courses_avg": 90
+					}
+				},
+				{
+					"IS": {
+						"courses_dept": "*dh*"
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_dept",
+				"courses_avg"
+			],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"courses_dept": "adhe",
+			"courses_avg": 90.02
+		},
+		{
+			"courses_dept": "dhyg",
+			"courses_avg": 90.03
+		},
+		{
+			"courses_dept": "dhyg",
+			"courses_avg": 90.08
+		},
+		{
+			"courses_dept": "dhyg",
+			"courses_avg": 90.08
+		},
+		{
+			"courses_dept": "adhe",
+			"courses_avg": 90.16
+		},
+		{
+			"courses_dept": "adhe",
+			"courses_avg": 90.17
+		},
+		{
+			"courses_dept": "adhe",
+			"courses_avg": 90.18
+		},
+		{
+			"courses_dept": "adhe",
+			"courses_avg": 90.5
+		},
+		{
+			"courses_dept": "dhyg",
+			"courses_avg": 90.63
+		},
+		{
+			"courses_dept": "dhyg",
+			"courses_avg": 90.67
+		},
+		{
+			"courses_dept": "adhe",
+			"courses_avg": 90.72
+		},
+		{
+			"courses_dept": "adhe",
+			"courses_avg": 90.82
+		},
+		{
+			"courses_dept": "adhe",
+			"courses_avg": 90.85
+		},
+		{
+			"courses_dept": "dhyg",
+			"courses_avg": 91.15
+		},
+		{
+			"courses_dept": "adhe",
+			"courses_avg": 91.29
+		},
+		{
+			"courses_dept": "dhyg",
+			"courses_avg": 91.3
+		},
+		{
+			"courses_dept": "adhe",
+			"courses_avg": 91.33
+		},
+		{
+			"courses_dept": "adhe",
+			"courses_avg": 91.33
+		},
+		{
+			"courses_dept": "adhe",
+			"courses_avg": 91.48
+		},
+		{
+			"courses_dept": "dhyg",
+			"courses_avg": 91.56
+		},
+		{
+			"courses_dept": "dhyg",
+			"courses_avg": 91.88
+		},
+		{
+			"courses_dept": "dhyg",
+			"courses_avg": 91.88
+		},
+		{
+			"courses_dept": "dhyg",
+			"courses_avg": 92.13
+		},
+		{
+			"courses_dept": "dhyg",
+			"courses_avg": 92.17
+		},
+		{
+			"courses_dept": "adhe",
+			"courses_avg": 92.54
+		},
+		{
+			"courses_dept": "adhe",
+			"courses_avg": 93.33
+		},
+		{
+			"courses_dept": "dhyg",
+			"courses_avg": 93.58
+		},
+		{
+			"courses_dept": "dhyg",
+			"courses_avg": 93.72
+		},
+		{
+			"courses_dept": "adhe",
+			"courses_avg": 96.11
+		}
+	]
+}
